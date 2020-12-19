@@ -1,6 +1,4 @@
 'use strict';
-let body = document.querySelector('body');
-let fixed_padding = document.getElementsByClassName('fixed-padding');
 
 /* IB */
 
