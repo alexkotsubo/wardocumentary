@@ -1,7 +1,5 @@
 /* Standart */
 
-/* Note: Почисть от лишнего; */
-
 *, *::before, *::after {
 	padding: 0;
 	margin: 0;
@@ -76,19 +74,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .wrapper {
 	min-height: 100vh;
-}
-
-/* IB */
-
-.ib {
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	position: relative;
-}
-
-.ib img {
-	display: none;
 }
 
 /* Button */
@@ -462,60 +447,66 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Media */
 
-/* Note: Поправить медиа запросы; */
-
 @media (max-width: 1750px) {
+	/* Btn */
+
+	.btn {
+		padding: 11px 16px;
+	}
+
+	/* Header */
+
 	.header-article {
-    flex-basis: 485px;
-    min-height: 303px;
-  }
+		flex-basis: 485px;
+		min-height: 303px;
+	}
 
-  .header-article__title {
-  	font-size: 33px;
-  }
+	.header-article__title {
+		font-size: 33px;
+	}
 
-  .header-article__excerpt {
-  	font-size: 16px;
-  	line-height: 22px;
-  	margin-top: 10px;
-  }
+	.header-article__excerpt {
+		font-size: 16px;
+		line-height: 22px;
+		margin-top: 10px;
+	}
 
-  .header-article__btn {
-  	margin-top: 13px;
-  }
+	.header-article__btn {
+		margin-top: 13px;
+	}
 
-  .header-article__views {
-  	font-size: 30px;
-  }
+	.header-article__views {
+		font-size: 30px;
+	}
 
-  .header-article__date {
-  	font-size: 20px;
-  }
+	.header-article__date {
+		font-size: 20px;
+	}
 
-  .header-article__country {
-  	border-width: 5px;
-  }
+	.header-article__country {
+		border-width: 5px;
+	}
 
-  .btn {
-  	padding: 11px 16px;
-  }
+	.header-article__wrap {
+		padding: 10px 15px;
+	}
 
-  .header-article__wrap {
-  	padding: 10px 15px;
-  }
-
-  .header-article__country img {
-  	max-width: 70px;
-  }
+	.header-article__country img {
+		max-width: 70px;
+	}
 }
 
 @media (max-width: 1400px) {
+	/* Scroll Dots */
+
 	.scroll-dots {
 		top: unset;
 		left: 10px;
 		bottom: 10px;
 		transform: translate(0, 0);
 	}
+
+	/* Scroll Block */
 
 	.scroll-block__title {
 		font-size: 35px;
@@ -527,6 +518,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 850px) {
+	/* Header */
+
 	.header__navigation {
 		flex-direction: column;
 	}
@@ -542,12 +535,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 710px) {
+	/* Header */
+
 	.header-article {
 		background-size: cover !important;
 	}
 }
 
 @media (max-width: 600px) {
+	/* Header */
+
 	.header-article__wrap {
 		flex-direction: column;
 		align-items: center;
@@ -567,16 +564,20 @@ h1, h2, h3, h4, h5, h6 {
 		text-align: center;
 	}
 
-	.scroll-block__title {
-		font-size: 25px;
-	}
-
 	.header-article__info {
 		align-self: center;
+	}
+
+	/* Scroll Block */
+
+	.scroll-block__title {
+		font-size: 25px;
 	}
 }
 
 @media (max-width: 400px) {
+	/* Search Form */
+
 	.search__input {
 		padding: 10px;
 	}
@@ -584,6 +585,8 @@ h1, h2, h3, h4, h5, h6 {
 	.search__text {
 		display: none;
 	}
+
+	/* Header */
 
 	.header-article__country {
 		margin: 0;
@@ -596,6 +599,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (min-width: 900px) {
+	/* Scroll Block */
+
 	.scroll-block {
 		display: flex;
 		align-items: center;

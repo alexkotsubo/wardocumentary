@@ -1,22 +1,9 @@
 'use strict';
 
-/* IB */
-
-function ib() {
-	let ib = document.querySelectorAll(".ib");
-	for (let i = 0; i < ib.length; i++) {
-		if(ib[i].querySelector('.ib_use')) {
-			ib[i].style.backgroundImage = ('url('+ib[i].querySelector('.ib_use').getAttribute('src')+')').replace(!'img/slide-l.jpg', '../');
-		}
-	}
-}
-
-ib();
-
 /* Scroll Blocks */
 
 let scrollBlocks = document.querySelectorAll('.scroll-block');
-let scrollDot;
+let scrollDotsElem;
 let scrollDots = document.querySelector('#scroll-dots');
 let header = document.querySelector('#header');
 
@@ -25,7 +12,7 @@ for(let i = 0, length = scrollBlocks.length; i < length; i++) {
 	scrollDot.className = 'scroll-dots__dot';
 	scrollDots.append(scrollDot);
 	if (i + 1 == scrollBlocks.length) {
-		scrollDot = document.querySelectorAll('.scroll-dots__dot');
+		scrollDotsElem = document.querySelectorAll('.scroll-dots__dot');
 
 		/* Active Dot */
 
