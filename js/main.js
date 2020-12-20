@@ -22,23 +22,23 @@ for(let i = 0, length = scrollBlocks.length; i < length; i++) {
 		let inScrollBlocks = false;
 
 		function getScrollValues() {
-			for(let i = 0, length = scrollDot.length; i < length; i++) {
+			for(let i = 0, length = scrollDotsElem.length; i < length; i++) {
 				scroll[i] = scrollBlocks[i].offsetTop;
 				max_scroll[i] = scrollBlocks[i].offsetHeight + scroll[i];
 			}
 		}
 
 		function getScrollPosition() {
-			for(let i = 0, length = scrollDot.length; i < length; i++) {
+			for(let i = 0, length = scrollDotsElem.length; i < length; i++) {
 				if (pageYOffset >= scroll[i] && pageYOffset < max_scroll[i]) {
-					scrollDot[i].classList.add('active');
+					scrollDotsElem[i].classList.add('active');
 				} else {
 					scrollDots.classList.remove('active');
-					scrollDot[i].classList.remove('active');
+					scrollDotsElem[i].classList.remove('active');
 				}
 			}
 
-			for(let i = 0, length = scrollDot.length; i < length; i++) {
+			for(let i = 0, length = scrollDotsElem.length; i < length; i++) {
 				if (pageYOffset >= scroll[i] && pageYOffset < max_scroll[i]) {
 					scrollDots.classList.add('active');
 					break;
