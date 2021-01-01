@@ -32,6 +32,11 @@ for(let i = 0, length = scrollBlocks.length; i < length; i++) {
 			for(let i = 0, length = scrollDotsElem.length; i < length; i++) {
 				if (pageYOffset >= scroll[i] && pageYOffset < max_scroll[i]) {
 					scrollDotsElem[i].classList.add('active');
+					if (i == 0) {
+						scrollDots.classList.add('blue');
+					} else {
+						scrollDots.classList.remove('blue');
+					}
 				} else {
 					scrollDots.classList.remove('active');
 					scrollDotsElem[i].classList.remove('active');
@@ -41,6 +46,11 @@ for(let i = 0, length = scrollBlocks.length; i < length; i++) {
 			for(let i = 0, length = scrollDotsElem.length; i < length; i++) {
 				if (pageYOffset >= scroll[i] && pageYOffset < max_scroll[i]) {
 					scrollDots.classList.add('active');
+					if (i == 0) {
+						scrollDots.classList.add('blue');
+					} else {
+						scrollDots.classList.remove('blue');
+					}
 					break;
 				} else {
 					scrollDots.classList.remove('active');
@@ -62,3 +72,26 @@ for(let i = 0, length = scrollBlocks.length; i < length; i++) {
 		});
 	}
 }
+
+/* Text */
+
+let scrollParagraph = document.querySelectorAll('.scroll-block__paragraph');
+let scrollBtn = document.querySelectorAll('.scroll-block__btn');
+
+document.addEventListener("DOMContentLoaded", function(e) {
+	for(let i = 0, length = scrollParagraph.length; i < length; i++) {
+		let scrollParagraphHeight = scrollParagraph[i].offsetHeight;
+		let tapScroll = false;
+		scrollParagraph[i].style.height = '0px';
+
+		scrollBtn[i].addEventListener('click', function(e) {
+			if (tapScroll) {
+				scrollParagraph[i].style.height = '0px';
+				tapScroll = false;
+			} else {
+				scrollParagraph[i].style.height = scrollParagraphHeight + 'px';
+				tapScroll = true;
+			}
+		});
+	}
+});
